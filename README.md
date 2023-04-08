@@ -4,7 +4,7 @@ Contributor: 1. Chun Cheong Mak (101409987) 2. Hei Yuet Lee (101409639)
 
 | Name | Tasks    |
 | :---:   | :---: |
-| Chun Cheong Mak | Data preprocessing, design and implement the algorithm of the new hybrid CNN classifer |
+| Chun Cheong Mak | Data preprocessing, modify the functions for feature vectors, design and implement the algorithm of the new hybrid CNN classifer |
 | Hei Yuet Lee | Build the baseline models for comparison, debug and test the algorithm  |
 
 <font size=3>The purpose of this project is to explore a way to build a <font color=red>new hybrid CNN classifer</font> by calculating the cosine similarity of feature vectors of 2 different images. The project is inspired by the concept of <font color=red>ensemble learning</font> discussed in the AASD 4000 - Machine Learning I and an article about image search using <font color=red>cosine similarity</font> of feature vectors of 2 different images. After building the new hybrid CNN classifer, it will be compared with other CNN transfer learning models. The link and literature review of the article is listed below:</font>
