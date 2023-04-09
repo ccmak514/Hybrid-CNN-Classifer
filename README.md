@@ -1,13 +1,13 @@
-# Build a New Hybrid CNN Classifer and Compare the Performance with 2 CNN Transfer Learning Models
+# A New Hybrid CNN Classifier and Compare the Performance with 2 CNN Transfer Learning Models
 This is a project of AASD 4015 - Advanced Applied Mathematical Concepts for Deep Learning <br>
 Contributor: 1. Chun Cheong Mak (101409987) 2. Hei Yuet Lee (101409639)
 
 | Name | Tasks    |
 | :---:   | :---: |
-| Chun Cheong Mak | Data preprocessing, modify the functions for feature vectors, design and implement the algorithm of the new hybrid CNN classifer |
+| Chun Cheong Mak | Data preprocessing, modify the functions for feature vectors, design and implement the algorithm of the new hybrid CNN classifier |
 | Hei Yuet Lee | Build the baseline models for comparison, debug and test the algorithm  |
 
-<font size=3>The purpose of this project is to explore a way to build a <font color=red>new hybrid CNN classifer</font> by calculating the cosine similarity of feature vectors of 2 different images. The project is inspired by the concept of <font color=red>ensemble learning</font> discussed in the AASD 4000 - Machine Learning I and an article about image search using <font color=red>cosine similarity</font> of feature vectors of 2 different images. After building the new hybrid CNN classifer, it will be compared with other CNN transfer learning models. The link and literature review of the article is listed below:</font>
+<font size=3>The purpose of this project is to explore a way to build a <font color=red>new hybrid CNN classifier</font> by calculating the cosine similarity of feature vectors of 2 different images. The project is inspired by the concept of <font color=red>ensemble learning</font> discussed in the AASD 4000 - Machine Learning I and an article about image search using <font color=red>cosine similarity</font> of feature vectors of 2 different images. After building the new hybrid CNN classifier, it will be compared with other CNN transfer learning models. The link and literature review of the article is listed below:</font>
 
 ### <b>Article - Image based search engine with CNN and Transfer Learning by Dhruv Shrinet</b>
 <font size=3>The link of the article:</font>
@@ -29,8 +29,8 @@ https://medium.com/swlh/image-based-search-engine-with-cnn-and-transfer-learning
 <font size=3>The link of Kaggle:</font>
 https://www.kaggle.com/datasets/gpiosenka/70-dog-breedsimage-data-set
 
-### <b>The Main Idea of the New Hybrid CNN classifer in AASD 4015 Project 2:</b>
-<font size=3>A new hybrid CNN classifer for classifying the breeds of dog is built as follows:</font>
+### <b>The Main Idea of the New Hybrid CNN classifier in AASD 4015 Project 2:</b>
+<font size=3>A new hybrid CNN classifier for classifying the breeds of dog is built as follows:</font>
 
 1. Use <font color=red>the first to the second last layer</font> of a <font color=red>ResNet50</font> model to build a first feature vector extractor.
 
@@ -52,12 +52,12 @@ https://www.kaggle.com/datasets/gpiosenka/70-dog-breedsimage-data-set
 
 10. Classify the new image by comparing the the total number of saved weighted sum of each breed.
 
-<font size=3>More details about the mechanism of the hybrid CNN classifer will be discussed in the notebook. The main takeaways from this notebook:
+<font size=3>More details about the mechanism of the hybrid CNN classifier will be discussed in the notebook. The main takeaways from this notebook:
 - Explore, preprocess the dataset 
-- Build functions and models for building hybrid CNN classifer
+- Build functions and models for building hybrid CNN classifier
 - Produce feature vectors
-- Prediction by the hybrid CNN classifer
-- Validation and Testing of the hybrid CNN classifer
+- Prediction by the hybrid CNN classifier
+- Validation and Testing of the hybrid CNN classifier
 - Build 2 baseline CNN transfer learning models
 - Compare the performance with the baseline models by test accuracy</font>
 
@@ -161,9 +161,9 @@ https://www.kaggle.com/datasets/gpiosenka/70-dog-breedsimage-data-set
 
 <img width="383" alt="prediction of a human" src="https://user-images.githubusercontent.com/101066418/230729004-b9373479-dc0b-42f2-90c8-d776ea3b75df.png">
 
-<font size=3>The hybrid classifer will <b>NOT</b> classify the image of human as one of the 70 breeds but tell you that you may input some irrelevant images. This is what a traditional CNN classfication model <font color=red><b>CANNOT</b></font> do.</font>
+<font size=3>The hybrid classifier will <b>NOT</b> classify the image of human as one of the 70 breeds but tell you that you may input some irrelevant images. This is what a traditional CNN classfication model <font color=red><b>CANNOT</b></font> do.</font>
 
-<font size=3>`accuracy` can calculate the valid accuracy or test accuracy. The idea is to use the above `prediction` to predict the valid and test set and count the number of correct predictions. Finally, the number is divided by the total number of images in valid set or test set and return the accuracy of the hybrid CNN classifer under different settings.</font>
+<font size=3>`accuracy` can calculate the valid accuracy or test accuracy. The idea is to use the above `prediction` to predict the valid and test set and count the number of correct predictions. Finally, the number is divided by the total number of images in valid set or test set and return the accuracy of the hybrid CNN classifier under different settings.</font>
 
 <img width="727" alt="accuracy" src="https://user-images.githubusercontent.com/101066418/230729332-055b4c43-b655-4c85-adc3-d83c0cc3f081.png">
 
@@ -235,17 +235,17 @@ The link to AASD 4015 Project 1: https://github.com/Jclee967/AASD4015-project1
 
 | Model                                            | Test Accuracy |
 | ------------------------------------------------ | ------------- |
-| Hybrid CNN Classifer                             | 0.939         |
+| Hybrid CNN Classifier                             | 0.939         |
 | Baseline Model 1: Transfer learning of ResNet50  | 0.913         |
 | Baseline Model 2: Transfer learning of Xception  | 0.962         |
 | Baseline Model 1 after Fine-tuning               | 0.916         |
 | Baseline Model 2 after Fine-tuning               | 0.962         |
 
-<font size=3>The test accuracy of hybrid CNN classifer is 0.939 that is at the middle among all the 5 models' test accuracy. Moreover, the fine-tuning is not customized. The approach is from the AASD 4015 Project 1 for simplicity. Although this hybrid CNN classifer is not an outstanding model, there are still some advantages I would like to mention.</font>
+<font size=3>The test accuracy of hybrid CNN classifier is 0.939 that is at the middle among all the 5 models' test accuracy. Moreover, the fine-tuning is not customized. The approach is from the AASD 4015 Project 1 for simplicity. Although this hybrid CNN classifier is not an outstanding model, there are still some advantages I would like to mention.</font>
 
-<font size=3>First, this hybrid CNN classifer can identify images that do not belong to the 70 classes. In Section 5, the hybrid CNN classifer can successfully identify that the image of human does not belong to the 70 classes. For traditional classification models, they will classify the image of human as one of 70 classes.</font>
+<font size=3>First, this hybrid CNN classifier can identify images that do not belong to the 70 classes. In Section 5, the hybrid CNN classifier can successfully identify that the image of human does not belong to the 70 classes. For traditional classification models, they will classify the image of human as one of 70 classes.</font>
 
-<font size=3>Second, this hybrid CNN classifer is built without using GPU but this model also use CNN. This may be an alternative for somebody who don't have a laptop with GPU or don't want to pay to use Colab.</font>
+<font size=3>Second, this hybrid CNN classifier is built without using GPU but this model also use CNN. This may be an alternative for somebody who don't have a laptop with GPU or don't want to pay to use Colab.</font>
 
-<font size=3>Next, I want to mention some possible improvement. We may do hyper-parameter tuning to find out the best setting of this hybrid CNN classifer and also introduce more pre-trained models. Only ResNet50 and Xception are used in this hybrid CNN classifer. Third model like InceptionV3 may be a good choice to introduced.</font>
+<font size=3>Next, I want to mention some possible improvement. We may do hyper-parameter tuning to find out the best setting of this hybrid CNN classifier and also introduce more pre-trained models. Only ResNet50 and Xception are used in this hybrid CNN classifier. Third model like InceptionV3 may be a good choice to introduced.</font>
 
