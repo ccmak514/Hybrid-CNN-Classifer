@@ -1,4 +1,4 @@
-# A New Hybrid CNN Classifier and Compare the Performance with 2 CNN Transfer Learning Models
+# A New Hybrid CNN Classifier vs 2 CNN Transfer Learning Models
 This is a project of AASD 4015 - Advanced Applied Mathematical Concepts for Deep Learning <br>
 Contributor: 1. Chun Cheong Mak (101409987) 2. Hei Yuet Lee (101409639)
 
